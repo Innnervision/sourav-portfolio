@@ -1,0 +1,117 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #05070B;
+  --bg-elevated: #111824;
+  --text: #F4F7FB;
+  --text-muted: #5C6B80;
+  --text-secondary: #9AA7B8;
+  --blue: #70A7FF;
+  --cyan: #52E5E7;
+  --violet: #8B7CFF;
+  --green: #5EE6A8;
+  --amber: #F0B429;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: rgba(112, 167, 255, 0.3);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e2a3a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2a3a50;
+}
+
+@layer utilities {
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #70A7FF 0%, #52E5E7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-violet {
+    background: linear-gradient(135deg, #8B7CFF 0%, #70A7FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-full {
+    background: linear-gradient(135deg, #70A7FF 0%, #52E5E7 40%, #8B7CFF 70%, #5EE6A8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass {
+    background: rgba(17, 24, 36, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(112, 167, 255, 0.1);
+  }
+
+  .glass-subtle {
+    background: rgba(5, 7, 11, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(112, 167, 255, 0.3);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(82, 229, 231, 0.3);
+  }
+
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+  }
+
+  .grid-bg {
+    background-image: linear-gradient(rgba(112,167,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(112,167,255,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}

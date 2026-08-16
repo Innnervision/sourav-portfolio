@@ -7,12 +7,11 @@
   email: "souravmukherjee7991@gmail.com",
   github: "https://github.com/Innnervision",
   portfolio: "https://universeinvedors.tech",
-  linkedin: "https://linkedin.com/in/souravmukherjee-xr",
+  linkedin: "https://www.linkedin.com/in/sourav-mukherjee-xr-architect/",
   photo: "/images/SouravMukherjeeCEO.png",
   availability: "Immediate Joiner",
-  bio: "Senior AI, XR & Real-Time 3D Engineer with 7+ years of experience building complex, production-grade applications, games, metaverse platforms, AI systems, and cloud solutions across multiple platforms.",
-  philosophy:
-    "I am passionate about solving highly complex technical challenges, learning new technologies, and taking ownership from concept to production. I strongly believe in growing with my team, sharing knowledge, mentoring others, and continuously learning whatever is needed to build better products together.",
+  bio: "Senior AI, XR & Real-Time 3D Engineer with 7+ years building production-grade AI systems, XR training platforms, metaverse environments, 50+ games and cloud products. Expert in AI-assisted development using Kiro, Devin, Codex, Cursor and GitHub Copilot.",
+  philosophy: "I am passionate about solving highly complex technical challenges, learning new technologies, and taking ownership from concept to production. I strongly believe in growing with my team, sharing knowledge, mentoring others, and continuously learning whatever is needed to build better products together.",
 };
 
 export const metrics = [
@@ -28,50 +27,37 @@ export const skills = [
   {
     category: "AI / GenAI",
     color: "#70A7FF",
-    items: [
-      "LLMs","AI Agents","RAG/Tool Workflows","Prompt Engineering","Hugging Face",
-      "Stable Diffusion","TTS/STT","Model Orchestration","AI Automation","Transformers/Diffusers",
-    ],
+    items: ["LLMs","AI Agents","RAG/Tool Workflows","Prompt Engineering","Hugging Face","Stable Diffusion","TTS/STT","Model Orchestration","AI Automation","Transformers/Diffusers","OpenAI API","LangChain","Vector DBs"],
+  },
+  {
+    category: "AI Tools & Editors",
+    color: "#52E5E7",
+    items: ["Kiro AI IDE","GitHub Copilot","Devin AI","OpenAI Codex","Cursor","Claude","ChatGPT","Gemini","Windsurf","v0.dev","Bolt.new","Replit AI","ElevenLabs","Midjourney","DALL-E 3"],
   },
   {
     category: "Unity / XR / 3D",
-    color: "#52E5E7",
-    items: [
-      "Unity","C#","Unity 6","OpenXR","Meta Quest/Oculus","XR Interaction Toolkit",
-      "AR Foundation","ARCore","ARKit","Vuforia","Zappar","WebXR","URP/HDRP","Shader Graph",
-    ],
+    color: "#8B7CFF",
+    items: ["Unity","C#","Unity 6","OpenXR","Meta Quest/Oculus","XR Interaction Toolkit","AR Foundation","ARCore","ARKit","Vuforia","Zappar","WebXR","URP/HDRP","Shader Graph"],
   },
   {
     category: "Generative 3D / CV",
-    color: "#8B7CFF",
-    items: [
-      "Text-to-3D","Image-to-3D","NeRF","Gaussian Splatting","PyTorch3D",
-      "Open3D","Kaolin","3D Reconstruction","Mesh Pipelines","Computer Vision","Sensor Fusion",
-    ],
+    color: "#5EE6A8",
+    items: ["Text-to-3D","Image-to-3D","NeRF","Gaussian Splatting","PyTorch3D","Open3D","Kaolin","3D Reconstruction","Mesh Pipelines","Computer Vision","Sensor Fusion"],
   },
   {
     category: "Full Stack",
-    color: "#5EE6A8",
-    items: [
-      "Python","PyTorch","FastAPI","Flutter/Dart","React","Next.js","TypeScript",
-      "Node.js","Express","Three.js","WebGL","REST APIs","Firebase","PostgreSQL","Redis",
-    ],
+    color: "#F0B429",
+    items: ["Python","PyTorch","FastAPI","Flutter/Dart","React","Next.js","TypeScript","Node.js","Express","Three.js","WebGL","REST APIs","Firebase","PostgreSQL","Redis"],
   },
   {
     category: "Cloud / DevOps",
-    color: "#F0B429",
-    items: [
-      "AWS Lambda","EC2","VPC","IAM","S3","CloudFront","Docker","Nginx",
-      "GCP","Cloud Run","GKE","Kubernetes","Terraform","GitHub Actions","CI/CD",
-    ],
+    color: "#70A7FF",
+    items: ["AWS Lambda","EC2","VPC","IAM","S3","CloudFront","Docker","Nginx","GCP","Cloud Run","GKE","Kubernetes","Terraform","GitHub Actions","CI/CD"],
   },
   {
-    category: "Delivery",
-    color: "#70A7FF",
-    items: [
-      "System Design","Technical Leadership","Agile/Scrum","Sprint Planning",
-      "Code Reviews","Performance Profiling","Release Engineering","Google Play/App Store",
-    ],
+    category: "Delivery & Leadership",
+    color: "#8B7CFF",
+    items: ["System Design","Technical Leadership","Agile/Scrum","Sprint Planning","Code Reviews","Performance Profiling","Release Engineering","Google Play/App Store","AI-Assisted Development","Vibe Coding"],
   },
 ];
 
@@ -84,12 +70,13 @@ export const experience = [
     location: "Kolkata, India",
     color: "#52E5E7",
     achievements: [
-      "Led engineering of BathXpertZ, a real-time 3D bathroom configuration and quotation platform supporting configurable layouts, catalog selection, BOQ/pricing, design cloning and CRM-oriented proposal workflows.",
+      "Led engineering of BathXpertZ — real-time 3D bathroom configuration and quotation platform with configurable layouts, catalog selection, BOQ/pricing, design cloning and CRM-oriented proposal workflows.",
       "Designed modular product-catalog, scene, material, pricing and multi-bathroom project architecture using reusable Unity components and data-driven workflows.",
       "Optimized interactive 3D performance through asset structuring, prefab reuse, material control, scene cleanup and platform-aware rendering decisions.",
-      "Contributed to ChefConnect, a mobile-responsive home-chef marketplace with ordering, chef/admin dashboards, OTP authentication, payment flows and real-time order tracking.",
+      "Contributed to ChefConnect — mobile-responsive home-chef marketplace with ordering, chef/admin dashboards, OTP authentication, payment flows and real-time order tracking.",
+      "Leveraged AI-assisted development tools (Kiro AI IDE, GitHub Copilot) to accelerate architecture design, code generation and delivery workflows.",
     ],
-    technologies: ["Unity 3D","3D Product Visualisation","CRM Integration","React","Node.js","NestJS"],
+    technologies: ["Unity 3D","3D Product Visualisation","CRM Integration","React","Node.js","NestJS","Kiro AI IDE","GitHub Copilot","AI-Assisted Development"],
   },
   {
     id: 2,
@@ -103,8 +90,9 @@ export const experience = [
       "Defined standards for scene structure, asset import, code quality, version control, CI/CD, profiling and release readiness for an 8+ member engineering group.",
       "Designed digital-twin and telemetry interaction patterns combining real-time 3D environments, cloud data and GenAI-assisted workflows.",
       "Mentored engineers on XR interaction design, debugging, performance optimization, Git workflows and production delivery discipline.",
+      "Adopted AI coding tools (Devin AI, ChatGPT, Cursor) for rapid prototyping, code review automation and technical documentation generation.",
     ],
-    technologies: ["Unity 3D","GenAI","AR/VR","AWS","IoT Sensors","WebGL","Digital Twins"],
+    technologies: ["Unity 3D","GenAI","AR/VR","AWS","IoT Sensors","WebGL","Digital Twins","Devin AI","Cursor","ChatGPT"],
   },
   {
     id: 3,
@@ -117,8 +105,9 @@ export const experience = [
       "Led R&D and end-to-end development of a cross-platform AR landscape application for Android, iOS and web, prioritizing tracking stability on real-world mobile devices.",
       "Evaluated AR Foundation, Vuforia, Zappar and WebAR approaches; designed computer-vision landmark detection and anchor-persistence concepts for improved tracking reliability.",
       "Applied camera and motion sensor-fusion concepts and native plugin integration while optimizing memory, textures, battery usage and runtime performance.",
+      "Used AI-assisted R&D tools (GitHub Copilot, Cursor, ChatGPT) to accelerate evaluation, prototyping and documentation workflows.",
     ],
-    technologies: ["ARCore","ARKit","AR Foundation","Computer Vision","Sensor Fusion","Unity","Vuforia"],
+    technologies: ["ARCore","ARKit","AR Foundation","Computer Vision","Sensor Fusion","Unity","Vuforia","GitHub Copilot","Cursor"],
   },
   {
     id: 4,
@@ -128,7 +117,7 @@ export const experience = [
     location: "Kolkata, India",
     color: "#5EE6A8",
     achievements: [
-      "Led development of a Zuellig Pharma healthcare metaverse connecting doctors and patients through virtual consultation spaces, prescription workflows, medicine discovery and purchasing paths.",
+      "Led development of the Zuellig Pharma healthcare metaverse connecting doctors and patients through virtual consultation spaces, prescription workflows, medicine discovery and purchasing paths.",
       "Integrated Unity with REST APIs, payment SDKs and healthcare workflows while maintaining responsive real-time rendering and multi-scene UX.",
       "Coordinated with backend, design and stakeholder teams to deliver production-focused demonstrations and cross-platform releases.",
     ],
@@ -166,27 +155,13 @@ export const experience = [
 ];
 
 export const education = [
-  {
-    degree: "Master of Computer Applications (MCA)",
-    institution: "Haldia Institute of Technology",
-    year: "2021",
-    color: "#70A7FF",
-  },
-  {
-    degree: "Bachelor of Computer Applications (BCA)",
-    institution: "Techno India Salt Lake",
-    year: "2018",
-    color: "#52E5E7",
-  },
+  { degree: "Master of Computer Applications (MCA)", institution: "Haldia Institute of Technology", year: "2021", color: "#70A7FF" },
+  { degree: "Bachelor of Computer Applications (BCA)", institution: "Techno India Salt Lake", year: "2018", color: "#52E5E7" },
 ];
 
 export const preferredRoles = [
-  "Senior/Lead Unity Engineer",
-  "XR Architect",
-  "Generative AI Engineer",
-  "AI/3D Engineer",
-  "Technical Lead",
-  "Full-Stack 3D Engineer",
+  "Senior/Lead Unity Engineer", "XR Architect", "Generative AI Engineer",
+  "AI/3D Engineer", "Technical Lead", "Full-Stack 3D Engineer",
 ];
 
 export const languages = ["English (Fluent)", "Bengali (Native)", "Hindi (Conversational)"];

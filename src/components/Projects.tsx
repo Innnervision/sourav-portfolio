@@ -1,4 +1,5 @@
 "use client";
+// Photo gallery import is handled in detail pages — cards use project.photo thumbnail
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";

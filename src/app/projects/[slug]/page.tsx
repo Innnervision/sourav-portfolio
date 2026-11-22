@@ -15,7 +15,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const project = projects.find(p => String(p.id) === slug)
   if (!project) return { title: "Project Not Found" }
-  return { title: project.title + " | Sourav Mukherjee", description: project.description }
+  const canonicalPath = `/projects/${project.id}/`
+  const ogImage = project.photo || "/images/SouravMukherjeeCEO.png"
+  return {
+    title: project.title,
+    description: project.description,
+    alternates: { canonical: canonicalPath },
+    openGraph: {
+      title: `${project.title} | Sourav Mukherjee`,
+      description: project.description,
+      url: canonicalPath,
+      type: "article",
+      images: [{ url: ogImage, alt: project.title }],
+    },
+  }
 }
 
 const CAT_COLOR: Record<string, string> = {

@@ -106,8 +106,8 @@ function ProductShowcase() {
         </div>
       </div>
       <div className="flex gap-1.5 mt-3">
-        {valid.map((_,i) => (
-          <button key={i} onClick={() => setCurrent(i)} className="rounded-full transition-all duration-300" style={{ width:i===current%valid.length?18:5, height:5, background:i===current%valid.length?"#70A7FF":"rgba(112,167,255,0.2)" }} />
+        {valid.map((item,i) => (
+          <button key={i} type="button" aria-label={`Show project slide ${i + 1}: ${item.label}`} onClick={() => setCurrent(i)} className="rounded-full transition-all duration-300" style={{ width:i===current%valid.length?18:5, height:5, background:i===current%valid.length?"#70A7FF":"rgba(112,167,255,0.2)" }} />
         ))}
       </div>
       <div className="flex gap-8 mt-4">
@@ -161,7 +161,7 @@ export default function Hero() {
 
             {/* CTAs */}
             <motion.div initial={{ opacity:0,y:16 }} animate={{ opacity:1,y:0 }} transition={{ delay:0.7 }} className="flex flex-wrap gap-3">
-              <button onClick={() => document.getElementById("projects")?.scrollIntoView({behavior:"smooth"})}
+              <button type="button" onClick={() => document.getElementById("projects")?.scrollIntoView({behavior:"smooth"})}
                 className="px-6 py-3 rounded-xl font-bold text-sm transition-all hover:opacity-90 hover:scale-105"
                 style={{ background:"linear-gradient(135deg,#70A7FF,#52E5E7)",color:"#05070B",boxShadow:"0 8px 24px rgba(112,167,255,0.3)" }}>
                 View My Work
@@ -169,8 +169,20 @@ export default function Hero() {
               <a href="/resume.pdf" download className="px-6 py-3 rounded-xl font-semibold text-sm transition-all hover:scale-105" style={{ border:"1px solid rgba(112,167,255,0.4)",color:"#70A7FF",background:"rgba(112,167,255,0.08)" }}>
                 Download Resume
               </a>
-              <a href={"mailto:" + person.email + "?subject=Hiring%20Inquiry"} className="px-6 py-3 rounded-xl font-semibold text-sm transition-all hover:scale-105" style={{ border:"1px solid rgba(94,230,168,0.4)",color:"#5EE6A8",background:"rgba(94,230,168,0.08)" }}>
-                Hire Me
+              <a href="https://universeinvedors.tech/white-label" target="_blank" rel="noopener noreferrer" className="px-6 py-3 rounded-xl font-semibold text-sm transition-all hover:scale-105" style={{ border:"1px solid rgba(94,230,168,0.4)",color:"#5EE6A8",background:"rgba(94,230,168,0.08)" }}>
+                Custom Projects &amp; White-Label ↗
+              </a>
+            </motion.div>
+
+            {/* Flexible All-Budget Client Banner */}
+            <motion.div initial={{ opacity:0,y:12 }} animate={{ opacity:1,y:0 }} transition={{ delay:0.78 }}
+              className="rounded-xl px-4 py-3 text-xs sm:text-sm leading-relaxed flex flex-wrap items-center justify-between gap-2"
+              style={{ background:"rgba(94,230,168,0.06)", border:"1px solid rgba(94,230,168,0.22)", color:"#cbd5e1" }}>
+              <span>
+                💬 <strong className="text-[#5EE6A8]">Free to talk</strong> — we welcome custom projects across all budgets, from small starter builds to enterprise systems.
+              </span>
+              <a href="mailto:rajmukherjee042@gmail.com?subject=Custom%20Project%20Inquiry" className="text-[#70A7FF] hover:underline font-semibold whitespace-nowrap">
+                rajmukherjee042@gmail.com →
               </a>
             </motion.div>
 

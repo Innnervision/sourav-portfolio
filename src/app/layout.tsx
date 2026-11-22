@@ -18,11 +18,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Sourav Mukherjee", url: "https://resume.universeinvedors.tech" }],
   creator: "Sourav Mukherjee",
+  alternates: {
+    canonical: "/",
+  },
   robots: { index: true, follow: true },
   openGraph: {
     title: "Sourav Mukherjee — Senior AI, XR & Real-Time 3D Engineer",
     description:
-      "7+ years building production AI systems, XR training platforms, 50+ games and cloud products. Portfolio of Sourav Mukherjee — Immediate Joiner.",
+      "7+ years building production AI systems, XR training platforms, 50+ games and cloud products. Free to talk — custom projects welcomed across all budgets.",
     url: "https://resume.universeinvedors.tech",
     siteName: "Sourav Mukherjee Portfolio",
     type: "website",
@@ -32,8 +35,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Sourav Mukherjee — Senior AI, XR & Real-Time 3D Engineer",
-    description: "7+ years building production-grade AI, XR and real-time 3D solutions. Immediate joiner.",
+    description: "7+ years building production-grade AI, XR and real-time 3D solutions. Custom projects welcomed across all budgets.",
     creator: "@universeinvedors",
+    images: ["/images/SouravMukherjeeCEO.png"],
   },
 };
 
@@ -49,9 +53,10 @@ const personSchema = {
   telephone: "+91-8918487914",
   address: { "@type": "PostalAddress", addressLocality: "Kolkata", addressRegion: "West Bengal", addressCountry: "IN" },
   sameAs: [
-    "https://linkedin.com/in/souravmukherjee-xr",
+    "https://www.linkedin.com/in/sourav-mukherjee-xr-architect/",
     "https://github.com/Innnervision",
     "https://universeinvedors.tech",
+    "https://universeinvedors.tech/white-label",
   ],
   worksFor: { "@type": "Organization", name: "Universe Invedors", url: "https://universeinvedors.tech" },
   alumniOf: [
@@ -65,6 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        <meta name="theme-color" content="#05070B" />
         {/* Google AdSense verification */}
         <meta name="google-adsense-account" content="ca-pub-8759032363251002" />
         {/* Structured data */}

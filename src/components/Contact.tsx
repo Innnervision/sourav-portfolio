@@ -6,12 +6,20 @@ import { person } from "@/data/resume";
 
 const contactMethods = [
   {
+    icon: "🚀",
+    label: "Custom Projects & White-Label",
+    value: "rajmukherjee042@gmail.com",
+    href: "mailto:rajmukherjee042@gmail.com?subject=Custom%20Project%20Inquiry",
+    color: "#5EE6A8",
+    description: "Free to talk — all budgets welcome",
+  },
+  {
     icon: "✉️",
-    label: "Email",
+    label: "Direct Email",
     value: person.email,
     href: `mailto:${person.email}`,
     color: "#70A7FF",
-    description: "Best for detailed inquiries",
+    description: "Hiring & detailed inquiries",
   },
   {
     icon: "💬",
@@ -24,7 +32,7 @@ const contactMethods = [
   {
     icon: "💼",
     label: "LinkedIn",
-    value: "souravmukherjee-xr",
+    value: "sourav-mukherjee-xr-architect",
     href: person.linkedin,
     color: "#52E5E7",
     description: "Professional network",
@@ -79,10 +87,11 @@ export default function Contact() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-[#9AA7B8] text-lg mb-12 max-w-2xl"
+          className="text-[#9AA7B8] text-lg mb-12 max-w-3xl"
         >
-          Available for senior engineering roles, technical leadership positions, and consulting engagements. 
-          Immediate joiner — let&apos;s build something exceptional.
+          Available for senior engineering roles, technical leadership, and custom product builds.{" "}
+          <strong className="text-white">Free to talk</strong> — we welcome custom projects across all budgets,
+          from small starter builds to enterprise systems.
         </motion.p>
 
         <div className="grid lg:grid-cols-2 gap-10">
@@ -126,24 +135,41 @@ export default function Contact() {
               </motion.a>
             ))}
 
-            {/* Availability card */}
+            {/* Availability & Flexible All-Budget Services card */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="glass rounded-2xl p-5 border border-[#5EE6A8]/20 mt-6"
+              className="glass rounded-2xl p-5 border border-[#5EE6A8]/25 mt-6 space-y-3"
             >
-              <div className="flex items-center gap-3 mb-2">
+              <div className="flex items-center gap-3">
                 <span className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5EE6A8] opacity-75" />
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-[#5EE6A8]" />
                 </span>
-                <span className="text-[#5EE6A8] font-semibold text-sm">Open to Opportunities</span>
+                <span className="text-[#5EE6A8] font-semibold text-sm">Open to Roles &amp; Custom Projects (All Budgets)</span>
               </div>
               <p className="text-[#9AA7B8] text-sm">
-                Immediate joiner. Available for senior roles in AI engineering, XR development, technical leadership and consulting.
+                Free to talk — we welcome custom projects across all budgets, from small starter builds to enterprise systems, alongside full-time senior AI/XR engineering roles.
               </p>
+              <div className="flex flex-wrap gap-2.5 pt-1">
+                <a
+                  href="https://universeinvedors.tech/white-label"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-xl text-xs font-bold text-[#05070B] transition-opacity hover:opacity-90"
+                  style={{ background: "linear-gradient(135deg,#5EE6A8,#52E5E7)" }}
+                >
+                  Explore White-Label &amp; Custom Services ↗
+                </a>
+                <a
+                  href="mailto:rajmukherjee042@gmail.com?subject=Custom%20Project%20Inquiry"
+                  className="px-4 py-2 rounded-xl text-xs font-semibold text-[#70A7FF] border border-[#70A7FF]/35 bg-[#70A7FF]/10 hover:bg-[#70A7FF]/20 transition-colors"
+                >
+                  Email rajmukherjee042@gmail.com
+                </a>
+              </div>
             </motion.div>
           </motion.div>
 
@@ -159,8 +185,9 @@ export default function Contact() {
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs text-[#9AA7B8] mb-1.5 font-medium">Your Name</label>
+                  <label htmlFor="contact-name" className="block text-xs text-[#9AA7B8] mb-1.5 font-medium">Your Name</label>
                   <input
+                    id="contact-name"
                     type="text"
                     name="name"
                     required
@@ -171,8 +198,9 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label className="block text-xs text-[#9AA7B8] mb-1.5 font-medium">Email Address</label>
+                  <label htmlFor="contact-email" className="block text-xs text-[#9AA7B8] mb-1.5 font-medium">Email Address</label>
                   <input
+                    id="contact-email"
                     type="email"
                     name="email"
                     required
@@ -185,27 +213,29 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-xs text-[#9AA7B8] mb-1.5 font-medium">Subject</label>
+                <label htmlFor="contact-subject" className="block text-xs text-[#9AA7B8] mb-1.5 font-medium">Subject</label>
                 <input
+                  id="contact-subject"
                   type="text"
                   name="subject"
                   required
                   value={form.subject}
                   onChange={handleChange}
-                  placeholder="Hiring Inquiry / Collaboration / Contract"
+                  placeholder="Hiring Inquiry / Custom Project / White-Label"
                   className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white text-sm placeholder:text-[#5C6B80] focus:outline-none focus:border-[#70A7FF]/50 focus:bg-[#70A7FF]/5 transition-all"
                 />
               </div>
 
               <div>
-                <label className="block text-xs text-[#9AA7B8] mb-1.5 font-medium">Message</label>
+                <label htmlFor="contact-message" className="block text-xs text-[#9AA7B8] mb-1.5 font-medium">Message</label>
                 <textarea
+                  id="contact-message"
                   name="message"
                   required
                   rows={5}
                   value={form.message}
                   onChange={handleChange}
-                  placeholder="Tell me about the role, project or opportunity..."
+                  placeholder="Tell me about the role, custom project, or budget range..."
                   className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white text-sm placeholder:text-[#5C6B80] focus:outline-none focus:border-[#70A7FF]/50 focus:bg-[#70A7FF]/5 transition-all resize-none"
                 />
               </div>

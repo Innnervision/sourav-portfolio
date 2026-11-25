@@ -19,9 +19,9 @@ export default function AllProjectsPage() {
         <h1 className="text-4xl sm:text-5xl font-black text-white mb-4">All Projects</h1>
         <p className="text-[#9AA7B8] max-w-xl">Every product, game, simulation, platform and AI system I have built — {projects.length} projects across XR, AI, Games, Web and Digital Twin.</p>
       </div>
-      <div className="flex flex-wrap gap-2 mb-10">
+      <div className="flex flex-wrap gap-2 mb-10" role="group" aria-label="Filter projects by category">
         {CATS.map(cat => (
-          <button key={cat} onClick={() => setActive(cat)}
+          <button key={cat} type="button" aria-pressed={active === cat} onClick={() => setActive(cat)}
             className="px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200"
             style={active === cat ? { background: CAT_COLOR[cat] || "#70A7FF", color: "#05070B" } : { background: "rgba(255,255,255,0.04)", color: "#9AA7B8", border: "1px solid rgba(255,255,255,0.07)" }}>
             {cat} {cat !== "All" && `(${projects.filter(p => p.category === cat).length})`}
@@ -62,6 +62,7 @@ export default function AllProjectsPage() {
                   <div className="flex items-center justify-between pt-2 border-t border-white/5">
                     <span className="text-[10px] font-semibold" style={{ color:project.status==="Shipped"?"#5EE6A8":project.status==="In Progress"?"#F0B429":"#9AA7B8" }}>{project.status}</span>
                     <div className="flex gap-2">
+                      <Link href={`/projects/${project.id}/`} className="text-[10px] text-[#52E5E7] hover:underline font-semibold">Details →</Link>
                       {project.links.live && <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="text-[10px] text-[#70A7FF] hover:underline">Live ↗</a>}
                       {project.links.github && <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="text-[10px] text-[#9AA7B8] hover:text-white">GitHub ↗</a>}
                     </div>

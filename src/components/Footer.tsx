@@ -21,10 +21,11 @@ export default function Footer() {
         </div>
 
         {/* Nav links */}
-        <div className="flex items-center gap-5 text-xs text-[#5C6B80]">
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5 text-xs text-[#5C6B80]">
           <Link href="/" className="hover:text-white transition-colors">Home</Link>
           <Link href="/projects" className="hover:text-white transition-colors">Projects</Link>
-          <a href={`mailto:${person.email}`} className="hover:text-white transition-colors">Email</a>
+          <a href="https://universeinvedors.tech/white-label" target="_blank" rel="noopener noreferrer" className="text-[#5EE6A8] hover:underline transition-colors">White-Label &amp; Custom Builds</a>
+          <a href="mailto:rajmukherjee042@gmail.com?subject=Custom%20Project%20Inquiry" className="text-[#70A7FF] hover:underline transition-colors">Free to Talk</a>
           <a href={person.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
           <a href={person.github} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a>
         </div>

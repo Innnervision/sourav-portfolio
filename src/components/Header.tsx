@@ -66,10 +66,11 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden md:flex items-center gap-1" aria-label="Primary navigation">
           {navLinks.map((link) => (
             <button
               key={link.href}
+              type="button"
               onClick={() => scrollTo(link.href)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                 activeSection === link.href.replace("#", "")
@@ -85,17 +86,27 @@ export default function Header() {
         {/* CTA */}
         <div className="flex items-center gap-3">
           <a
-            href="mailto:souravmukherjee7991@gmail.com?subject=Hiring%20Inquiry"
+            href="https://universeinvedors.tech/white-label"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden lg:flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-[#5EE6A8]/35 bg-[#5EE6A8]/10 text-[#5EE6A8] text-xs font-semibold hover:bg-[#5EE6A8]/20 transition-colors"
+          >
+            <span>Custom Builds</span>
+          </a>
+          <a
+            href="mailto:rajmukherjee042@gmail.com?subject=Custom%20Project%20or%20Hiring%20Inquiry"
             className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-[#70A7FF] to-[#8B7CFF] text-white text-sm font-semibold hover:opacity-90 transition-opacity shadow-lg shadow-blue-500/20"
           >
-            <span>Hire Me</span>
+            <span>Free to Talk</span>
           </a>
 
           {/* Mobile menu button */}
           <button
+            type="button"
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden w-9 h-9 flex flex-col items-center justify-center gap-1.5 rounded-lg hover:bg-white/5 transition-colors"
             aria-label="Toggle menu"
+            aria-expanded={menuOpen}
           >
             <span className={`block w-5 h-0.5 bg-white/80 transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
             <span className={`block w-5 h-0.5 bg-white/80 transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
@@ -129,10 +140,18 @@ export default function Header() {
                 </button>
               ))}
               <a
-                href="mailto:souravmukherjee7991@gmail.com?subject=Hiring%20Inquiry"
-                className="mt-2 px-4 py-3 rounded-lg bg-gradient-to-r from-[#70A7FF] to-[#8B7CFF] text-white text-sm font-semibold text-center hover:opacity-90 transition-opacity"
+                href="https://universeinvedors.tech/white-label"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 px-4 py-3 rounded-lg border border-[#5EE6A8]/35 bg-[#5EE6A8]/10 text-[#5EE6A8] text-sm font-semibold text-center hover:bg-[#5EE6A8]/20 transition-colors"
               >
-                Hire Me
+                White-Label &amp; Custom Builds
+              </a>
+              <a
+                href="mailto:rajmukherjee042@gmail.com?subject=Custom%20Project%20or%20Hiring%20Inquiry"
+                className="mt-1 px-4 py-3 rounded-lg bg-gradient-to-r from-[#70A7FF] to-[#8B7CFF] text-white text-sm font-semibold text-center hover:opacity-90 transition-opacity"
+              >
+                Free to Talk — Email Us
               </a>
             </div>
           </motion.div>
